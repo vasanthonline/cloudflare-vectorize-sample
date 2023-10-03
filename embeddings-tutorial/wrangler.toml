@@ -2,6 +2,13 @@ name = "embeddings-tutorial"
 main = "src/index.ts"
 compatibility_date = "2023-10-02"
 
+[[vectorize]]
+binding = "VECTORIZE_INDEX" # available in your Worker on env.VECTORIZE_INDEX
+index_name = "embeddings-index"
+
+[ai]
+binding = "AI" # available in your Worker on env.AI
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables
